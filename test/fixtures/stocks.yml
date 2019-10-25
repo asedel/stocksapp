@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Symbol: MyString
+  Name: MyString
+  LastSale: 9.99
+  MarketCap: 9.99
+  IPOyear: 2019-10-31
+  Sector: MyText
+  Industry: MyString
+  SummaryQuote: MyText
+  Exchange: MyText
+
+two:
+  Symbol: MyString
+  Name: MyString
+  LastSale: 9.99
+  MarketCap: 9.99
+  IPOyear: 2019-10-31
+  Sector: MyText
+  Industry: MyString
+  SummaryQuote: MyText
+  Exchange: MyText
