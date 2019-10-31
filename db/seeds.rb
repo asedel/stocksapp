@@ -28,9 +28,9 @@ csvs.each do |infile|
     t = Stock.find_or_initialize_by(Name: row['Name'], Symbol: row['Symbol'])
     t.Symbol = row['Symbol']
     t.Name = row['Name']
-    t.LastSale = row['LastSale']
-    t.MarketCap = row['MarketCap']
-    t.IPOyear = row['IPOyear']
+    t.LastSale = row['LastSale'].to_f
+    t.MarketCap = row['MarketCap'][1..-1].to_f
+    t.IPOyear = row['IPOyear'].to_i
     t.Sector = row['Sector']
     t.Industry = row['industry']
     t.SummaryQuote = row["Summary Quote"]
