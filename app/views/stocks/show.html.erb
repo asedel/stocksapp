@@ -10,44 +10,39 @@
           <span class="cinema"><%= @stock.Symbol %></span>
         </div>
         <div class="meta">
-          <span class="version">Exchange <%= @stock.Exchange %></span>
+          <span class="version">Exchange: <%= @stock.Exchange %></span>
         </div>
         <div class="meta">
-          <span class="release">Sector <%= @stock.Sector %></span>
+          <span class="release">Sector: <%= @stock.Sector %></span>
         </div>
 	<div class="meta">
-          <span class="release">Industry <%= @stock.Industry %></span>
+          <span class="release">Industry: <%= @stock.Industry %></span>
+        </div>
+	<div class="meta">
+          <span class="release">IPO Year: <%= @stock.IPOyear %></span>
         </div>
         <div class="bottom aligned content">
-          <button class="ui primary button" disabled>Download</button>
+          <button class="ui primary button" disabled>30 Day Quotes</button>
         </div>
       </div>
     </div>
   </div>
   <div class="ui divider"></div>
   <div class="ui three small statistics">
-    <!-- <div class="statistic">
+    <div class="statistic">
       <div class="value">
-        <i class="small green arrow alternate circle down outline icon"></i> <%= number_to_human @app.downloads %>
+        <i class="small green arrow alternate circle outline icon"></i> <%= number_to_human @stock.MarketCap %>
       </div>
       <div class="label">
-        Downloads
+        MarketCap
       </div>
     </div>
     <div class="statistic">
       <div class="value">
-        <i class="small yellow star icon"></i> <%= @app.rating %>
+        <i class="small yellow star icon"></i> <%= @stock.LastSale %>
       </div>
       <div class="label">
-        Stars
-      </div>
-    </div> -->
-    <div class="statistic">
-      <div class="value">
-        <i class="small users icon"></i> <%= number_with_delimiter @stock.MarketCap %>
-      </div>
-      <div class="label">
-        MarketCap
+        Last Sale
       </div>
     </div>
   </div>
