@@ -2,7 +2,7 @@
   <h1 class="ui header"><%= params[:query] %> (<%= @stocks.count %> results)</h1>  
   <div class="ui divider"></div>
   <div class="ui divided link items">
-    <% @stocks.each do |app| %>
+    <% @stocks.each do |stock| %>
       <a class="item" href="<%= stock_path(stock) %>">
         <div class="content">
           <div class="header">
