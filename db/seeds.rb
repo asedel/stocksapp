@@ -29,7 +29,22 @@ csvs.each do |infile|
     t.Symbol = row['Symbol']
     t.Name = row['Name']
     t.LastSale = row['LastSale'].to_f
-    t.MarketCap = row['MarketCap'][1..-1].to_f
+    x = row['MarketCap'][-1]
+    #puts "x is #{x} for #{t.Symbol}"
+    y = 1
+    case x
+    when 'B'
+      y = "1000000000"
+    when 'K'
+      y = "1000"
+    when 'M'
+      y = "1000000"
+    when 'T'
+      y = "1000000000000"
+    end
+    #puts "y is #{y} for #{t.Symbol}"
+    t.MarketCap = (row['MarketCap'][1..-1].to_f * y.to_f)
+    #puts "market cap for #{t.Symbol} is #{t.MarketCap}"
     t.IPOyear = row['IPOyear'].to_i
     t.Sector = row['Sector']
     t.Industry = row['industry']
