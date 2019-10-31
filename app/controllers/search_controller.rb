@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @stocks = Stock.where("name LIKE ?", "%#params[:query]}%")
+    @stocks = Stock.where("Name LIKE ?", "%#{params[:query]}%")
   end
 end
