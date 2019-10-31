@@ -1,0 +1,30 @@
+<div class="ui raised segment">
+  <h1 class="ui header"><%= params[:query] %> (<%= @stocks.count %> results)</h1>  
+  <div class="ui divider"></div>
+  <div class="ui divided link items">
+    <% @stocks.each do |app| %>
+      <a class="item" href="<%= stock_path(stock) %>">
+        <div class="content">
+          <div class="header">
+	    <%= stock.Name %>
+	    <%= stock.Symbol %>
+	  </div>
+          <div class="meta">
+            <span><%= stock.Industry %></span>
+          </div>
+          <div class="description">
+            <p><%= truncate stock.Sector, length: 250, seperator: /\w+/ %></p>
+          </div>
+          <div class="extra">
+            <div class="ui right floated primary button">
+              View More
+              <i class="right chevron icon"></i>
+            </div>
+            <div class="ui label"><i class="green arrow alternate circle down outline icon"></i> \$<%= number_to_human stock.MarketCap %> MarketCap</div>
+            <div class="ui label"><i class="yellow star icon"></i> <%= stock.LastSale %> LastSale</div>
+          </div>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</div>

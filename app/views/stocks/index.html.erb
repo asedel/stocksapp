@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Symbol</th>
+      <th>Industry</th>
+      <th>Sector</th>
+      <th>Exchange</th>
+      <th>Summary Quote</th>
+      <th>Market Cap</th>
+      <th>IPO Year</th>
+      <th>LastSale</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stocks.each do |stock| %>
+      <tr>
+        <td><%= stock.Name %></td>
+        <td><%= stock.Symbol %></td>
+        <td><%= stock.Industry %></td>
+        <td><%= stock.Sector %></td>
+        <td><%= stock.Exchange %></td>
+        <td><%= stock.SummaryQuote %></td>
+        <td><%= stock.MarketCap %></td>
+        <td><%= stock.IPOYear %></td>
+	<td><%= stock.LastSale %></td>
+        <td><%= link_to 'Show', stock %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
