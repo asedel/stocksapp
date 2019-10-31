@@ -6,8 +6,7 @@
       <a class="item" href="<%= stock_path(stock) %>">
         <div class="content">
           <div class="header">
-	    <%= stock.Name %>
-	    <%= stock.Symbol %>
+	    <%= stock.Name %> :	<%= stock.Symbol %>
 	  </div>
           <div class="meta">
             <span><%= stock.Industry %></span>
@@ -20,7 +19,7 @@
               View More
               <i class="right chevron icon"></i>
             </div>
-            <div class="ui label"><i class="green arrow alternate circle down outline icon"></i> \$<%= number_to_human stock.MarketCap %> MarketCap</div>
+            <div class="ui label"><i class="green arrow alternate circle down outline icon"></i> $<%= number_to_human stock.MarketCap %> MarketCap</div>
             <div class="ui label"><i class="yellow star icon"></i> <%= stock.LastSale %> LastSale</div>
           </div>
         </div>
