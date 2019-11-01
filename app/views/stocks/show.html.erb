@@ -21,6 +21,9 @@
 	<div class="meta">
           <span class="release">IPO Year: <%= @stock.IPOyear %></span>
         </div>
+	<div class="meta">
+          <span class="link">URL: <%= @stock.SummaryQuote %></span>
+        </div
         <div class="bottom aligned content">
           <button class="ui primary button" disabled>30 Day Quotes</button>
         </div>
@@ -47,16 +50,8 @@
     </div>
   </div>
   <div class="ui divider"></div>
-  <h2 class="header">Description</h2>
-  <div>
-    <p><%= @stock.SummaryQuote %></p>
-  </div>
-  <div class="ui divider"></div>
-  <h2 class="header">Screenshots</h2>
+  <h2 class="header">Chart</h2>
   <div style="overflow-x: scroll; display: flex;">
     <img src="https://dummyimage.com/420x320/ff7f7f/333333.png&text=Sample 1" >
-    <img src="https://dummyimage.com/420x320/7f7fff/333333.png&text=Sample 2" >
-    <img src="https://dummyimage.com/420x320/7fff7f/333333.png&text=Sample 3" >
-    <img src="https://dummyimage.com/420x320/7f7f7f/333333.png&text=Sample 4" >
   </div>
 </div>
