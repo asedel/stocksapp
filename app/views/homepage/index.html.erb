@@ -1,13 +1,8 @@
 <h1>Stocks Query Tool</h1>
 <p>Obtain Market Ref Data for Stocks and 30 Quoute Charts</p>
 
-<div class="ui raised segment no padding">
-  <form method="GET" action="search">
-    <div class="ui fluid icon transparent large input">
-      <input name="query" type="text" placeholder="Search stocks..." autocomplete="off" />
-      <button type="submit">
-        <i class="search icon"></i>
-      </button> 
-    </div>
-  </form>
+<div class="ui raised segment search-container">
+  <img class="ui centered medium image src="/logo-text.png" >
 </div>
+
+<%= react_component("Search") %>
