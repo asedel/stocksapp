@@ -12,8 +12,8 @@ updates:
   
   - package-ecosystem: "yarn" # See documentation for possible values
     directory: "/" # Location of package manifests
-      schedule:
-        interval: "daily"
+    schedule:
+      interval: "daily"
 
 #  - package-ecosytem: "bundler"
 #    directory: "/"
