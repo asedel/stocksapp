@@ -10,13 +10,8 @@ updates:
     schedule:
       interval: "daily"
   
-  - package-ecosystem: "yarn" # See documentation for possible values
+  - package-ecosystem: "bundler" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
 
-#  - package-ecosytem: "bundler"
-#    directory: "/"
-#    schedule:
-#      interval: "weekly"
-      
